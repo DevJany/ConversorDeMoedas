@@ -1,6 +1,7 @@
 package br.com.devjany.conversordemoedas.api;
 
 import br.com.devjany.conversordemoedas.api.dto.ExchangeRateResponse;
+import br.com.devjany.conversordemoedas.config.ApiConfig;
 import br.com.devjany.conversordemoedas.exception.ApiConnectionException;
 import com.google.gson.Gson;
 
@@ -10,7 +11,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class ExchangeRateApiClient {
-    private static final String API_KEY = "eff88959906fa454bf42ad13"; // Substitua pela sua chave
+    public static final String API_KEY = ApiConfig.API_KEY; // Substitua pela sua chave
     private static final String BASE_URL = "https://v6.exchangerate-api.com/v6/" + API_KEY + "/latest/";
 
     private final HttpClient client;
